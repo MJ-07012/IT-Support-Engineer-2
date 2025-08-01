@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Warm Neutral & Deep Blue -->
+    <!-- Chosen Palette: Deep Slate & Electric Blue -->
     <!-- Application Structure Plan: The application is designed as a top-down narrative portfolio. It starts with a direct intro, leading with a call-to-action to view the most critical section: the 'Role Alignment' comparison. This section is placed prominently after the intro to immediately answer the recruiter's primary question: "Is this candidate a good fit?". This is followed by expandable sections for Professional Experience, detailed Certification explanations, Core Competencies (using an icon-based grid), and a final Skills summary. This structure prioritizes impact and direct evidence over a traditional resume flow. -->
     <!-- Visualization & Content Choices: 
         - Role Alignment (HTML/CSS): Goal: Compare. A modern, two-column layout directly maps job requirements to the candidate's experience. Interaction: Hovering over a row highlights it with a background color and subtle lift. Justification: This design offers a clear, direct, and visually appealing comparison that is easy to scan.
@@ -20,25 +20,23 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f5f5f4; /* stone-100 */
-            background-image:
-                linear-gradient(rgba(219, 234, 254, 0.2) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(219, 234, 254, 0.2) 1px, transparent 1px);
-            background-size: 20px 20px;
+            background-color: #0f172a; /* slate-900 */
+            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 16px 16px;
         }
         .nav-link {
             transition: color 0.3s ease;
         }
         .nav-link.active, .nav-link:hover {
-            color: #2563eb; /* blue-600 */
+            color: #60a5fa; /* blue-400 */
         }
         .alignment-row {
             transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-out;
         }
         .alignment-row:hover {
             transform: scale(1.01);
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.07);
-            background-color: #eff6ff; /* blue-50 */
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            background-color: #1e293b; /* slate-800 */
         }
         .job-details {
             max-height: 0;
@@ -52,13 +50,13 @@
         }
     </style>
 </head>
-<body class="text-stone-700 antialiased">
+<body class="text-slate-300 antialiased">
 
     <!-- Header & Navigation -->
-    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-stone-200">
+    <header class="bg-slate-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-700">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-stone-800">Marlon Jordan</a>
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-600">
+            <a href="#" class="text-xl font-bold text-white">Marlon Jordan</a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
                 <a href="#alignment" class="nav-link">Role Alignment</a>
                 <a href="#competencies" class="nav-link">Competencies</a>
                 <a href="#experience" class="nav-link">Experience</a>
@@ -72,15 +70,15 @@
 
         <!-- Introduction Section -->
         <section id="intro" class="text-center py-20 md:py-32">
-            <h1 class="text-4xl md:text-6xl font-bold text-stone-800 mb-4">IT Support Engineer II</h1>
-            <p class="text-lg md:text-xl text-stone-600 max-w-3xl mx-auto mb-8">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">IT Support Engineer II</h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-8">
                 An interactive overview of my qualifications for the IT Support Engineer role at StubHub, demonstrating a direct alignment with your team's needs and goals.
             </p>
             <div class="flex justify-center items-center gap-4">
-                <a href="#alignment" class="bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors">
+                <a href="#alignment" class="bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-blue-500 transition-colors">
                     See Role Alignment
                 </a>
-                <a href="https://linkedin.com/in/mj2117" target="_blank" class="bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg border border-stone-300 hover:bg-stone-50 transition-colors">
+                <a href="https://linkedin.com/in/mj2117" target="_blank" class="bg-slate-700 text-slate-100 font-semibold px-8 py-3 rounded-lg border border-slate-600 hover:bg-slate-600 transition-colors">
                     View LinkedIn
                 </a>
             </div>
@@ -89,15 +87,15 @@
         <!-- Alignment Comparison Section -->
         <section id="alignment" class="py-16 scroll-mt-20">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-stone-800 mb-2">Alignment Comparison</h2>
-                <p class="text-lg max-w-3xl mx-auto text-stone-600">A direct, side-by-side comparison of StubHub's requirements against my demonstrated experience.</p>
+                <h2 class="text-3xl font-bold text-white mb-2">Alignment Comparison</h2>
+                <p class="text-lg max-w-3xl mx-auto text-slate-400">A direct, side-by-side comparison of StubHub's requirements against my demonstrated experience.</p>
             </div>
-            <div class="bg-white rounded-xl shadow-lg p-4 md:p-6 border border-stone-200">
+            <div class="bg-slate-800/50 rounded-xl shadow-lg p-4 md:p-6 border border-slate-700">
                 <div class="space-y-4">
                     <!-- Header -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-6 pb-3 border-b border-stone-200">
-                        <h3 class="font-bold text-blue-600">StubHub Requirement</h3>
-                        <h3 class="font-bold text-blue-600">Marlon's Experience</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-6 pb-3 border-b border-slate-700">
+                        <h3 class="font-bold text-blue-400">StubHub Requirement</h3>
+                        <h3 class="font-bold text-blue-400">Marlon's Experience</h3>
                     </div>
                     <!-- Rows -->
                     <div id="alignment-container" class="space-y-1">
@@ -106,23 +104,23 @@
                 </div>
             </div>
         </section>
-
+        
         <!-- Core Competencies Section -->
         <section id="competencies" class="py-16 scroll-mt-20">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-stone-800 mb-2">Core Competencies</h2>
-                <p class="text-lg max-w-3xl mx-auto text-stone-600">My key areas of expertise in IT support and operations.</p>
+                <h2 class="text-3xl font-bold text-white mb-2">Core Competencies</h2>
+                <p class="text-lg max-w-3xl mx-auto text-slate-400">My key areas of expertise in IT support and operations.</p>
             </div>
             <div id="competencies-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
                 <!-- Competency cards will be injected here -->
             </div>
         </section>
-        
+
         <!-- Professional Experience Section -->
         <section id="experience" class="py-16 scroll-mt-20">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-stone-800 mb-2">Professional Experience</h2>
-                <p class="text-lg max-w-3xl mx-auto text-stone-600">Click on any role to expand and view key accomplishments.</p>
+                <h2 class="text-3xl font-bold text-white mb-2">Professional Experience</h2>
+                <p class="text-lg max-w-3xl mx-auto text-slate-400">Click on any role to expand and view key accomplishments.</p>
             </div>
             <div id="experience-container" class="grid md:grid-cols-5 gap-8">
                 <!-- Experience will be injected here -->
@@ -132,8 +130,8 @@
         <!-- Certifications Section -->
         <section id="certifications" class="py-16 scroll-mt-20">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-stone-800 mb-2">Value-Driven Certifications</h2>
-                <p class="text-lg max-w-3xl mx-auto text-stone-600">How my certifications directly contribute to the success of an IT Support Engineer.</p>
+                <h2 class="text-3xl font-bold text-white mb-2">Value-Driven Certifications</h2>
+                <p class="text-lg max-w-3xl mx-auto text-slate-400">How my certifications directly contribute to the success of an IT Support Engineer.</p>
             </div>
             <div id="certifications-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Certification cards will be injected here -->
@@ -143,8 +141,8 @@
         <!-- Skills Section -->
         <section id="skills" class="py-16 scroll-mt-20">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-stone-800 mb-2">Technical Skills Matrix</h2>
-                <p class="text-lg max-w-3xl mx-auto text-stone-600">A comprehensive list of technologies and platforms I work with.</p>
+                <h2 class="text-3xl font-bold text-white mb-2">Technical Skills Matrix</h2>
+                <p class="text-lg max-w-3xl mx-auto text-slate-400">A comprehensive list of technologies and platforms I work with.</p>
             </div>
             <div id="skills-matrix" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Skills categories will be injected here -->
@@ -153,9 +151,9 @@
 
     </main>
 
-    <footer class="text-center py-8 mt-12 border-t border-stone-200 bg-white">
-        <p class="text-stone-600 font-semibold">Marlon Jordan</p>
-        <p class="text-stone-500">Marlon.Jordan21@gmail.com | (646) 249-6025</p>
+    <footer class="text-center py-8 mt-12 border-t border-slate-800 bg-slate-900">
+        <p class="text-slate-300 font-semibold">Marlon Jordan</p>
+        <p class="text-slate-400">Marlon.Jordan21@gmail.com | (646) 249-6025</p>
     </footer>
 
     <script>
@@ -229,7 +227,7 @@
         alignmentData.forEach(item => {
             const row = document.createElement('div');
             row.className = "alignment-row grid grid-cols-1 md:grid-cols-2 gap-6 p-4 md:p-6 rounded-lg";
-            row.innerHTML = `<p class="font-semibold text-stone-800 flex items-center"><span class="text-xl mr-3 text-blue-500">✓</span>${item.req}</p><p class="text-stone-600 md:pl-3">${item.exp}</p>`;
+            row.innerHTML = `<p class="font-semibold text-slate-100 flex items-center"><span class="text-xl mr-3 text-blue-400">✓</span>${item.req}</p><p class="text-slate-400 md:pl-3">${item.exp}</p>`;
             alignmentContainer.appendChild(row);
         });
         
@@ -241,15 +239,15 @@
 
         experienceData.forEach((job, index) => {
             const jobButton = document.createElement('button');
-            jobButton.className = "w-full text-left p-4 rounded-lg border border-stone-200 bg-white hover:bg-stone-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500";
-            jobButton.innerHTML = `<p class="font-semibold text-stone-800">${job.role}</p><p class="text-sm text-stone-500">${job.date}</p>`;
+            jobButton.className = "w-full text-left p-4 rounded-lg border border-slate-700 bg-slate-800 hover:bg-slate-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500";
+            jobButton.innerHTML = `<p class="font-semibold text-slate-100">${job.role}</p><p class="text-sm text-slate-400">${job.date}</p>`;
             jobButton.dataset.index = index;
             jobList.appendChild(jobButton);
 
             const detailsDiv = document.createElement('div');
             detailsDiv.className = "job-details";
             detailsDiv.dataset.index = index;
-            detailsDiv.innerHTML = `<div class="bg-white p-6 rounded-lg border border-stone-200"><ul class="list-disc list-inside space-y-2">${job.points.map(p => `<li>${p}</li>`).join('')}</ul></div>`;
+            detailsDiv.innerHTML = `<div class="bg-slate-800 p-6 rounded-lg border border-slate-700"><ul class="list-disc list-inside space-y-2 text-slate-300">${job.points.map(p => `<li>${p}</li>`).join('')}</ul></div>`;
             jobDetailsContainer.appendChild(detailsDiv);
         });
         experienceContainer.appendChild(jobList);
@@ -265,13 +263,13 @@
                 const wasOpen = targetPanel.classList.contains('open');
                 
                 detailPanels.forEach(p => { p.classList.remove('open'); p.style.paddingTop = '0'; p.style.paddingBottom = '0'; });
-                jobButtons.forEach(b => b.classList.remove('bg-blue-50', 'text-blue-700', 'ring-2', 'ring-blue-500'));
+                jobButtons.forEach(b => b.classList.remove('bg-blue-900/20', 'ring-2', 'ring-blue-500'));
                 
                 if (!wasOpen) {
                     targetPanel.classList.add('open');
                     targetPanel.style.paddingTop = '0';
                     targetPanel.style.paddingBottom = '0';
-                    button.classList.add('bg-blue-50', 'text-blue-700', 'ring-2', 'ring-blue-500');
+                    button.classList.add('bg-blue-900/20', 'ring-2', 'ring-blue-500');
                 }
             });
         });
@@ -279,10 +277,10 @@
         const competenciesGrid = document.getElementById('competencies-grid');
         competencyData.forEach(comp => {
             const card = document.createElement('div');
-            card.className = "bg-white p-4 rounded-xl shadow-md text-center flex flex-col items-center justify-center border border-stone-200 hover:shadow-lg hover:-translate-y-1 transition-all";
+            card.className = "bg-slate-800 p-4 rounded-xl shadow-md text-center flex flex-col items-center justify-center border border-slate-700 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1 transition-all";
             card.innerHTML = `
-                <div class="text-4xl mb-3 text-blue-600">${comp.icon}</div>
-                <h4 class="font-semibold text-stone-700 text-sm">${comp.name}</h4>
+                <div class="text-4xl mb-3 text-blue-400">${comp.icon}</div>
+                <h4 class="font-semibold text-slate-300 text-sm">${comp.name}</h4>
             `;
             competenciesGrid.appendChild(card);
         });
@@ -290,10 +288,10 @@
         const certsGrid = document.getElementById('certifications-grid');
         certificationData.forEach(cert => {
             const card = document.createElement('div');
-            card.className = "bg-white p-6 rounded-xl shadow-md border border-stone-200";
+            card.className = "bg-slate-800 p-6 rounded-xl shadow-md border border-slate-700";
             card.innerHTML = `
-                <h4 class="font-bold text-stone-800 text-lg mb-2">${cert.title}</h4>
-                <p class="text-stone-600 leading-relaxed">${cert.body}</p>
+                <h4 class="font-bold text-slate-100 text-lg mb-2">${cert.title}</h4>
+                <p class="text-slate-400 leading-relaxed">${cert.body}</p>
             `;
             certsGrid.appendChild(card);
         });
@@ -301,10 +299,10 @@
         const skillsMatrix = document.getElementById('skills-matrix');
         for (const [category, skills] of Object.entries(skillsData)) {
             const catDiv = document.createElement('div');
-            catDiv.className = "bg-white p-6 rounded-xl shadow-md";
-            let skillsHTML = skills.map(skill => `<li class="text-stone-600">${skill}</li>`).join('');
+            catDiv.className = "bg-slate-800 p-6 rounded-xl shadow-md border border-slate-700";
+            let skillsHTML = skills.map(skill => `<li class="text-slate-300">${skill}</li>`).join('');
             catDiv.innerHTML = `
-                <h4 class="font-semibold text-stone-800 border-b border-stone-200 pb-2 mb-3">${category}</h4>
+                <h4 class="font-semibold text-slate-100 border-b border-slate-700 pb-2 mb-3">${category}</h4>
                 <ul class="space-y-2">${skillsHTML}</ul>
             `;
             skillsMatrix.appendChild(catDiv);
