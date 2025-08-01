@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marlon Jordan | Candidate for IT Support Engineer II @ StubHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutral & Deep Blue -->
+    <!-- Application Structure Plan: The application is designed as a top-down narrative portfolio. It starts with a direct intro, leading with a call-to-action to view the most critical section: the 'Role Alignment' comparison. This section is placed prominently after the intro to immediately answer the recruiter's primary question: "Is this candidate a good fit?". This is followed by expandable sections for Professional Experience, detailed Certification explanations, Core Competencies (using an icon-based grid), and a final Skills summary. This structure prioritizes impact and direct evidence over a traditional resume flow. -->
+    <!-- Visualization & Content Choices: 
+        - Role Alignment (HTML/CSS): Goal: Compare. A modern, two-column layout directly maps job requirements to the candidate's experience. Interaction: Hovering over a row highlights it with a background color and subtle lift. Justification: This design offers a clear, direct, and visually appealing comparison that is easy to scan.
+        - Core Competencies (HTML/CSS): Goal: Inform. An icon-driven grid of cards clearly presents areas of expertise without subjective ratings. Justification: This is a clean, modern, and visually pleasing alternative to proficiency bars, focusing on what the skills are.
+        - Professional Experience (HTML/CSS/JS): Goal: Organize. A two-column, expandable accordion layout. All roles are collapsed by default. Interaction: Clicking a job title reveals the details. Justification: Keeps the page clean and allows the user to explore roles of interest without being overwhelmed by text.
+        - Certifications (HTML/CSS): Goal: Inform. A grid of cards, each explaining the value of a certification in the context of the role. Justification: Provides deeper insight than just listing the certification names.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f4; /* stone-100 */
+            background-image:
+                linear-gradient(rgba(219, 234, 254, 0.2) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(219, 234, 254, 0.2) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link.active, .nav-link:hover {
+            color: #2563eb; /* blue-600 */
+        }
+        .alignment-row {
+            transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-out;
+        }
+        .alignment-row:hover {
+            transform: scale(1.01);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.07);
+            background-color: #eff6ff; /* blue-50 */
+        }
+        .job-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            opacity: 0;
+        }
+        .job-details.open {
+            max-height: 500px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="text-stone-700 antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-stone-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-stone-800">Marlon Jordan</a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-600">
+                <a href="#alignment" class="nav-link">Role Alignment</a>
+                <a href="#competencies" class="nav-link">Competencies</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#skills" class="nav-link">Skills</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6">
+
+        <!-- Introduction Section -->
+        <section id="intro" class="text-center py-20 md:py-32">
+            <h1 class="text-4xl md:text-6xl font-bold text-stone-800 mb-4">IT Support Engineer II</h1>
+            <p class="text-lg md:text-xl text-stone-600 max-w-3xl mx-auto mb-8">
+                An interactive overview of my qualifications for the IT Support Engineer role at StubHub, demonstrating a direct alignment with your team's needs and goals.
+            </p>
+            <div class="flex justify-center items-center gap-4">
+                <a href="#alignment" class="bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors">
+                    See Role Alignment
+                </a>
+                <a href="https://linkedin.com/in/mj2117" target="_blank" class="bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg border border-stone-300 hover:bg-stone-50 transition-colors">
+                    View LinkedIn
+                </a>
+            </div>
+        </section>
+
+        <!-- Alignment Comparison Section -->
+        <section id="alignment" class="py-16 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-stone-800 mb-2">Alignment Comparison</h2>
+                <p class="text-lg max-w-3xl mx-auto text-stone-600">A direct, side-by-side comparison of StubHub's requirements against my demonstrated experience.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-4 md:p-6 border border-stone-200">
+                <div class="space-y-4">
+                    <!-- Header -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-6 pb-3 border-b border-stone-200">
+                        <h3 class="font-bold text-blue-600">StubHub Requirement</h3>
+                        <h3 class="font-bold text-blue-600">Marlon's Experience</h3>
+                    </div>
+                    <!-- Rows -->
+                    <div id="alignment-container" class="space-y-1">
+                        <!-- Alignment rows will be injected here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Competencies Section -->
+        <section id="competencies" class="py-16 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-stone-800 mb-2">Core Competencies</h2>
+                <p class="text-lg max-w-3xl mx-auto text-stone-600">My key areas of expertise in IT support and operations.</p>
+            </div>
+            <div id="competencies-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- Competency cards will be injected here -->
+            </div>
+        </section>
+        
+        <!-- Professional Experience Section -->
+        <section id="experience" class="py-16 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-stone-800 mb-2">Professional Experience</h2>
+                <p class="text-lg max-w-3xl mx-auto text-stone-600">Click on any role to expand and view key accomplishments.</p>
+            </div>
+            <div id="experience-container" class="grid md:grid-cols-5 gap-8">
+                <!-- Experience will be injected here -->
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-16 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-stone-800 mb-2">Value-Driven Certifications</h2>
+                <p class="text-lg max-w-3xl mx-auto text-stone-600">How my certifications directly contribute to the success of an IT Support Engineer.</p>
+            </div>
+            <div id="certifications-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Certification cards will be injected here -->
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-stone-800 mb-2">Technical Skills Matrix</h2>
+                <p class="text-lg max-w-3xl mx-auto text-stone-600">A comprehensive list of technologies and platforms I work with.</p>
+            </div>
+            <div id="skills-matrix" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Skills categories will be injected here -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-stone-200 bg-white">
+        <p class="text-stone-600 font-semibold">Marlon Jordan</p>
+        <p class="text-stone-500">Marlon.Jordan21@gmail.com | (646) 249-6025</p>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const alignmentData = [
+            { req: "IT support for multiple office branches", exp: "Provided Tier 2/3 support to 18,000+ employees across global offices, demonstrating expertise in large-scale, distributed environments." },
+            { req: "Azure AD, PIM, VMs", exp: "Holds Azure Fundamentals certification and managed user access with Azure AD. Familiar with core Azure services and ready to support cloud transition." },
+            { req: "Automation/Scripting (PowerShell)", exp: "Identified automation opportunities and possesses foundational PowerShell knowledge, aligning with the team's goal to streamline requests and remove bottlenecks." },
+            { req: "Jira Service Mngmt, Slack, Zoom", exp: "Administered Zoom for 200+ executive meetings and used Jira extensively to manage enhancement requests and technical incidents." },
+            { req: "Ownership of IT support operations", exp: "Demonstrated full ownership by performing root cause analysis on ~30 monthly incidents, driving process improvements and ensuring system reliability." },
+            { req: "Onboarding/Offboarding & Asset Mgmt", exp: "Managed the complete device lifecycle and executed onboarding/offboarding for 300+ users, ensuring new hires were effective immediately." },
+            { req: "Patching (Intune, Kandji)", exp: "Spearheaded a Windows 10 migration using Intune and has experience with endpoint management tools like JAMF (similar to Kandji)." }
+        ];
+
+        const experienceData = [
+            {
+                role: "Product IT Operations Specialist",
+                date: "Aug 2021 - Present",
+                points: [
+                    "Proactively managed IT equipment inventory and the complete device lifecycle for remote teams.",
+                    "Executed IT systems onboarding and offboarding for over 300 employees, managing Active Directory and Azure AD.",
+                    "Oversaw enhancement requests and technical issues, translating user feedback into actionable Jira tickets.",
+                    "Demonstrated ownership of IT support operations by performing root cause analysis on ~30 monthly incidents."
+                ]
+            },
+            {
+                role: "Technical Support Lead Executive",
+                date: "May 2017 - Aug 2021",
+                points: [
+                    "Delivered confidential, high-priority technical support to Mike Bloomberg and his executive team.",
+                    "Administered and supported key collaboration tools, including Zoom and Microsoft Teams, for over 200 annual executive meetings.",
+                    "Spearheaded a Windows 10 migration for 8,000 users, utilizing SCCM and Intune."
+                ]
+            },
+            {
+                role: "Senior IT Support Engineer",
+                date: "May 2013 - May 2017",
+                points: [
+                    "Offered comprehensive Tier 2/3 IT support to 18,000+ employees in a multi-office environment.",
+                    "Applied knowledge of LAN hardware to troubleshoot network connectivity issues.",
+                    "Collaborated with admins to upgrade self-service IT tools, significantly reducing support tickets."
+                ]
+            }
+        ];
+
+        const competencyData = [
+            { icon: "👥", name: "End-User & Executive Support" },
+            { icon: "🎯", name: "Incident Management" },
+            { icon: "☁️", name: "Cloud & Endpoint Management" },
+            { icon: "💬", name: "Collaboration Tool Admin" },
+            { icon: "⚙️", name: "Process Ownership" },
+            { icon: "🌐", name: "Network Troubleshooting" },
+            { icon: "🤖", name: "Automation Mindset" },
+            { icon: "📦", name: "Asset Lifecycle Management" }
+        ];
+        
+        const certificationData = [
+            { title: "Azure Fundamentals", body: "Provides a solid baseline in Microsoft Azure, directly aligning with StubHub's use of Azure AD, VMs, and the ongoing transition from on-premise workloads. This ensures I can quickly contribute to cloud support tasks." },
+            { title: "ITIL v4", body: "Demonstrates a deep understanding of IT service management frameworks. This is crucial for maintaining system reliability, handling incidents effectively, and working collaboratively on process improvements as mentioned in the job description." },
+            { title: "PMP & Scrum Product Owner", body: "These certifications highlight my ability to manage projects, understand stakeholder needs, and contribute to team collaboration. This is valuable for working on projects to improve procedures and driving employee engagement with tools." },
+        ];
+
+        const skillsData = {
+            "Cloud & Automation": ["Microsoft Azure (Azure AD, VMs)", "Intune", "PowerShell (Foundational)", "Autopilot (Foundational)"],
+            "Collaboration & Productivity": ["Jira Service Management", "Confluence", "Slack", "Zoom", "Microsoft 365"],
+            "Endpoint & Systems Management": ["Active Directory (GPO)", "SCCM", "JAMF", "Windows/macOS"],
+            "Networking": ["TCP/IP, DNS, DHCP", "VLANs", "LAN/WAN", "Switch & WAP Mgmt"]
+        };
+
+        const alignmentContainer = document.getElementById('alignment-container');
+        alignmentData.forEach(item => {
+            const row = document.createElement('div');
+            row.className = "alignment-row grid grid-cols-1 md:grid-cols-2 gap-6 p-4 md:p-6 rounded-lg";
+            row.innerHTML = `<p class="font-semibold text-stone-800 flex items-center"><span class="text-xl mr-3 text-blue-500">✓</span>${item.req}</p><p class="text-stone-600 md:pl-3">${item.exp}</p>`;
+            alignmentContainer.appendChild(row);
+        });
+        
+        const experienceContainer = document.getElementById('experience-container');
+        const jobList = document.createElement('div');
+        jobList.className = "md:col-span-2 space-y-2";
+        const jobDetailsContainer = document.createElement('div');
+        jobDetailsContainer.className = "md:col-span-3";
+
+        experienceData.forEach((job, index) => {
+            const jobButton = document.createElement('button');
+            jobButton.className = "w-full text-left p-4 rounded-lg border border-stone-200 bg-white hover:bg-stone-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500";
+            jobButton.innerHTML = `<p class="font-semibold text-stone-800">${job.role}</p><p class="text-sm text-stone-500">${job.date}</p>`;
+            jobButton.dataset.index = index;
+            jobList.appendChild(jobButton);
+
+            const detailsDiv = document.createElement('div');
+            detailsDiv.className = "job-details";
+            detailsDiv.dataset.index = index;
+            detailsDiv.innerHTML = `<div class="bg-white p-6 rounded-lg border border-stone-200"><ul class="list-disc list-inside space-y-2">${job.points.map(p => `<li>${p}</li>`).join('')}</ul></div>`;
+            jobDetailsContainer.appendChild(detailsDiv);
+        });
+        experienceContainer.appendChild(jobList);
+        experienceContainer.appendChild(jobDetailsContainer);
+
+        const jobButtons = jobList.querySelectorAll('button');
+        const detailPanels = jobDetailsContainer.querySelectorAll('.job-details');
+
+        jobButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const index = button.dataset.index;
+                const targetPanel = jobDetailsContainer.querySelector(`.job-details[data-index='${index}']`);
+                const wasOpen = targetPanel.classList.contains('open');
+                
+                detailPanels.forEach(p => { p.classList.remove('open'); p.style.paddingTop = '0'; p.style.paddingBottom = '0'; });
+                jobButtons.forEach(b => b.classList.remove('bg-blue-50', 'text-blue-700', 'ring-2', 'ring-blue-500'));
+                
+                if (!wasOpen) {
+                    targetPanel.classList.add('open');
+                    targetPanel.style.paddingTop = '0';
+                    targetPanel.style.paddingBottom = '0';
+                    button.classList.add('bg-blue-50', 'text-blue-700', 'ring-2', 'ring-blue-500');
+                }
+            });
+        });
+
+        const competenciesGrid = document.getElementById('competencies-grid');
+        competencyData.forEach(comp => {
+            const card = document.createElement('div');
+            card.className = "bg-white p-4 rounded-xl shadow-md text-center flex flex-col items-center justify-center border border-stone-200 hover:shadow-lg hover:-translate-y-1 transition-all";
+            card.innerHTML = `
+                <div class="text-4xl mb-3 text-blue-600">${comp.icon}</div>
+                <h4 class="font-semibold text-stone-700 text-sm">${comp.name}</h4>
+            `;
+            competenciesGrid.appendChild(card);
+        });
+
+        const certsGrid = document.getElementById('certifications-grid');
+        certificationData.forEach(cert => {
+            const card = document.createElement('div');
+            card.className = "bg-white p-6 rounded-xl shadow-md border border-stone-200";
+            card.innerHTML = `
+                <h4 class="font-bold text-stone-800 text-lg mb-2">${cert.title}</h4>
+                <p class="text-stone-600 leading-relaxed">${cert.body}</p>
+            `;
+            certsGrid.appendChild(card);
+        });
+
+        const skillsMatrix = document.getElementById('skills-matrix');
+        for (const [category, skills] of Object.entries(skillsData)) {
+            const catDiv = document.createElement('div');
+            catDiv.className = "bg-white p-6 rounded-xl shadow-md";
+            let skillsHTML = skills.map(skill => `<li class="text-stone-600">${skill}</li>`).join('');
+            catDiv.innerHTML = `
+                <h4 class="font-semibold text-stone-800 border-b border-stone-200 pb-2 mb-3">${category}</h4>
+                <ul class="space-y-2">${skillsHTML}</ul>
+            `;
+            skillsMatrix.appendChild(catDiv);
+        }
+
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        window.onscroll = () => {
+            let current = 'intro';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 80) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        };
+    });
+    </script>
+</body>
+</html>
